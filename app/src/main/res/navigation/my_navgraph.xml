@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/firstFragment">
+    <fragment
+        android:id="@+id/firstFragment"
+        android:name="com.example.kotlinroomdbcrud.navigationComponent.navDrawerFrag.firstFragment"
+        android:label="First Fragment"
+        tools:layout="@layout/fragment_first" >
+        <action
+            android:id="@+id/navToSecondFragment"
+            app:destination="@id/secondFragment" />
+        <argument
+            android:name="numberFirst"
+            app:argType="integer"
+            android:defaultValue="1" />
+    </fragment>
+    <fragment
+        android:id="@+id/secondFragment"
+        android:name="com.example.kotlinroomdbcrud.navigationComponent.navDrawerFrag.secondFragment"
+        android:label="Second Fragment"
+        tools:layout="@layout/fragment_second" >
+        <action
+            android:id="@+id/navToFirstFragment"
+            app:destination="@id/firstFragment" />
+        <argument
+            android:name="numberSec"
+            app:argType="integer"
+            android:defaultValue="2" />
+    </fragment>
+</navigation>

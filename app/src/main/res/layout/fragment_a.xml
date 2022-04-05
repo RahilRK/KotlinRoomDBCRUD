@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".navigationComponent.CustomObjectSafeArgs.FragmentA">
+
+    <EditText
+        android:id="@+id/edFname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLength="10"
+        android:padding="16dp"
+        android:layout_margin="16dp"
+        android:hint="Enter First Name"/>
+
+    <EditText
+        android:id="@+id/edLname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLength="10"
+        android:padding="16dp"
+        android:layout_margin="16dp"
+        android:hint="Enter Last Name"/>
+
+    <EditText
+        android:id="@+id/edAge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLength="3"
+        android:inputType="number"
+        android:padding="16dp"
+        android:layout_margin="16dp"
+        android:hint="Enter Age"/>
+
+    <Button
+        android:id="@+id/donebt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:layout_margin="16dp"
+        android:text="Done"/>
+
+</LinearLayout>

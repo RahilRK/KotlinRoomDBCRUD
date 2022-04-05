@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".navigationComponent.bottomSheetFragment.BottomSheetFragment"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/homeMenu"
+        android:layout_width="match_parent"
+        android:layout_height="64dp">
+
+        <ImageView
+            android:id="@+id/ivHome"
+            android:layout_width="64dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_home"
+            android:padding="8dp"
+            android:layout_alignParentStart="true"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Home"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:layout_toEndOf="@id/ivHome"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/profileMenu"
+        android:layout_width="match_parent"
+        android:layout_height="64dp">
+
+        <ImageView
+            android:id="@+id/ivProfile"
+            android:layout_width="64dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_profile"
+            android:padding="8dp"
+            android:layout_alignParentStart="true"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Profile"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:layout_toEndOf="@id/ivProfile"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/settingsMenu"
+        android:layout_width="match_parent"
+        android:layout_height="64dp">
+
+        <ImageView
+            android:id="@+id/ivSettings"
+            android:layout_width="64dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_settings"
+            android:padding="8dp"
+            android:layout_alignParentStart="true"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Settings"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:layout_toEndOf="@id/ivSettings"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_bottomsheet_navgraph"
+    app:startDestination="@id/normalFragment">
+
+    <fragment
+        android:id="@+id/normalFragment"
+        android:name="com.example.kotlinroomdbcrud.navigationComponent.bottomSheetFragment.NormalFragment"
+        android:label="fragment_normal"
+        tools:layout="@layout/fragment_normal" >
+        <action
+            android:id="@+id/action_normalFragment_to_bottomSheetFragment"
+            app:destination="@id/bottomSheetFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/bottomSheetFragment"
+        android:name="com.example.kotlinroomdbcrud.navigationComponent.bottomSheetFragment.BottomSheetFragment"
+        android:label="fragment_bottom_sheet"
+        tools:layout="@layout/fragment_bottom_sheet" />
+</navigation>
