@@ -44,6 +44,8 @@ class ConceptsActivity : AppCompatActivity() {
         var failMsg =  ApiResult.fail("null")
         var loadingMsg =  ApiResult.loading("isLoading")
         sealedClassEg(loadingMsg)*/
+
+        extentionFunEg()
     }
 
     fun equalToLogic() {
@@ -173,8 +175,22 @@ class Student {
     }
 }
 
+//todo sealed class eg
 sealed class ApiResult() {
     class loading(var message: String): ApiResult()
     class success(var data: String): ApiResult()
     class fail(var message: String): ApiResult()
+}
+
+fun extentionFunEg() {
+    val a: Int = 2
+    val b: Int = 5
+
+    val c: Int = 7
+    Log.e("extentionFunEg", "result: ${c.sum(a,b)}")
+}
+
+fun Int.sum(num1: Int, num2: Int):Int {
+
+    return this + num1 + num2
 }

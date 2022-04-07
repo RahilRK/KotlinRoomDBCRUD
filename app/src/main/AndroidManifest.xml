@@ -15,7 +15,7 @@
         android:theme="@style/Theme.KotlinRoomDBCRUD"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".ConceptsActivity">
+            android:name=".concepts.ConceptsActivity">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
