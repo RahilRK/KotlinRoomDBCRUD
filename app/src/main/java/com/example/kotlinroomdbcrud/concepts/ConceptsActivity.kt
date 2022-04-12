@@ -45,7 +45,11 @@ class ConceptsActivity : AppCompatActivity() {
         var loadingMsg =  ApiResult.loading("isLoading")
         sealedClassEg(loadingMsg)*/
 
-        extentionFunEg()
+//        extentionFunEg()
+
+        val phoneSpecification = PhoneSpecification()
+        phoneSpecification.ram()
+        phoneSpecification.specialFeature()
     }
 
     fun equalToLogic() {
@@ -193,4 +197,40 @@ fun extentionFunEg() {
 fun Int.sum(num1: Int, num2: Int):Int {
 
     return this + num1 + num2
+}
+
+class PhoneSpecification: Phone() {
+    val battery: Int = 4000
+
+    fun ram() {
+        Log.e("PhoneSpecification", "LPDDR4X")
+    }
+
+    fun storage() {
+        Log.e("PhoneSpecification", "128GB")
+    }
+}
+
+class PhoneSoftware: Phone() {
+    val OS: String = "Android 12"
+    val softwareUpdateYears: Int = 3
+
+    fun cleanOS() {
+        Log.e("PhoneSoftware", "Stock Android")
+    }
+
+    fun noAds() {
+        Log.e("PhoneSoftware", "No ads, no bloatwares")
+    }
+
+
+}
+
+open class Phone {
+    val price: Int = 10000
+    val brand: String = "Samsung"
+
+    fun specialFeature() {
+        Log.e("specialFeature", "KNOCS security")
+    }
 }
