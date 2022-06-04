@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Rahil/AndroidProjects/KotlinRoomDBCRUD/app/src/main/res/drawable/ic_settings.xml" value="0.1115" />
         <entry key="..\:/Rahil/AndroidProjects/KotlinRoomDBCRUD/app/src/main/res/layout/activity_app.xml" value="0.16770833333333332" />
         <entry key="..\:/Rahil/AndroidProjects/KotlinRoomDBCRUD/app/src/main/res/layout/activity_bottom_navigation.xml" value="0.16770833333333332" />
         <entry key="..\:/Rahil/AndroidProjects/KotlinRoomDBCRUD/app/src/main/res/layout/activity_bottom_sheet.xml" value="0.16770833333333332" />
@@ -16,6 +17,7 @@
         <entry key="..\:/Rahil/AndroidProjects/KotlinRoomDBCRUD/app/src/main/res/layout/activity_my_self.xml" value="0.1" />
         <entry key="..\:/Rahil/AndroidProjects/KotlinRoomDBCRUD/app/src/main/res/layout/activity_navigation_drawer.xml" value="0.16770833333333332" />
         <entry key="..\:/Rahil/AndroidProjects/KotlinRoomDBCRUD/app/src/main/res/layout/activity_retrofit.xml" value="0.16770833333333332" />
+        <entry key="..\:/Rahil/AndroidProjects/KotlinRoomDBCRUD/app/src/main/res/layout/activity_take_image.xml" value="0.16770833333333332" />
         <entry key="..\:/Rahil/AndroidProjects/KotlinRoomDBCRUD/app/src/main/res/layout/fragment_a.xml" value="0.16666666666666666" />
         <entry key="..\:/Rahil/AndroidProjects/KotlinRoomDBCRUD/app/src/main/res/layout/fragment_b.xml" value="0.16770833333333332" />
         <entry key="..\:/Rahil/AndroidProjects/KotlinRoomDBCRUD/app/src/main/res/layout/fragment_bottom_sheet.xml" value="0.16666666666666666" />
