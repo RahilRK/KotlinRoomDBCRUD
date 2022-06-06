@@ -7,7 +7,7 @@ import com.example.kotlinroomdbcrud.dagger2Retrofit.model.ProductsItem
 
 class DataBindingViewModel:ViewModel() {
 
-    private val _model: MutableLiveData<Person> = MutableLiveData()
+    val _model: MutableLiveData<Person> = MutableLiveData()
     val model: LiveData<Person>
     get() = _model
 

@@ -16,10 +16,19 @@
         android:padding="8dp"
         tools:context=".dataBindingExample.DataBindingActivity">
 
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            setImageUrl="@{viewModel.model.imageUrl}"
+            android:scaleType="centerCrop"
+            />
+
         <TextView
             android:id="@+id/name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="@{viewModel.model.name}"
             android:textSize="18sp"
             android:textColor="@color/black"
             />
@@ -28,6 +37,7 @@
             android:id="@+id/age"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="@{viewModel.model.age}"
             android:textSize="18sp"
             android:textColor="@color/black"
             />
