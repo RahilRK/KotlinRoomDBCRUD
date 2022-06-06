@@ -14,14 +14,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.KotlinRoomDBCRUD"
         android:usesCleartextTraffic="true">
+
         <activity
-            android:name=".concepts.ConceptsActivity">
+            android:name=".dataBindingExample.DataBindingActivity">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".concepts.ConceptsActivity">
+
         </activity>
         <activity
             android:name=".coroutine.SecondActivity"
