@@ -11,9 +11,17 @@ class Application: Application() {
     lateinit var appComponent: AppComponent
     lateinit var applicationComponent: ApplicationComponent
 
+    lateinit var repository: Repository
+
     override fun onCreate() {
         super.onCreate()
         appComponent = DaggerAppComponent.builder().build()
         applicationComponent = DaggerApplicationComponent.builder().build()
+
+        init()
+    }
+
+    fun init() {
+        repository = Repository()
     }
 }
