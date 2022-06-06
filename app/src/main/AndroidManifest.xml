@@ -15,27 +15,29 @@
         android:theme="@style/Theme.KotlinRoomDBCRUD"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".concepts.ConceptsActivity">
-
+            android:name=".dataBindingExample.DataBindingActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".concepts.ConceptsActivity">
+        </activity>
         <activity
             android:name=".coroutine.SecondActivity"
             android:exported="false" />
-        <activity
-            android:name=".coroutine.CoroutineActivity">
-<!--            <intent-filter>-->
-<!--                <action android:name="android.intent.action.MAIN" />-->
+        <activity android:name=".coroutine.CoroutineActivity">
 
-<!--                <category android:name="android.intent.category.LAUNCHER" />-->
-<!--            </intent-filter>-->
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
         </activity>
-        <activity
-            android:name=".dagger2Retrofit.Dagger2RetrofitActivity">
+        <activity android:name=".dagger2Retrofit.Dagger2RetrofitActivity">
 
             <!-- <intent-filter> -->
             <!-- <action android:name="android.intent.action.MAIN" /> -->
