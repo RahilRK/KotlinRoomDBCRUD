@@ -5,6 +5,7 @@ import com.example.kotlinroomdbcrud.dagger2.component.AppComponent
 import com.example.kotlinroomdbcrud.dagger2.component.DaggerAppComponent
 import com.example.kotlinroomdbcrud.dagger2Retrofit.di.component.ApplicationComponent
 import com.example.kotlinroomdbcrud.dagger2Retrofit.di.component.DaggerApplicationComponent
+import com.example.kotlinroomdbcrud.dataBindingExample.network.ApiClient
 
 class Application: Application() {
 
@@ -19,6 +20,7 @@ class Application: Application() {
         applicationComponent = DaggerApplicationComponent.builder().build()
 
         init()
+        ApiClient.initRetrofit()
     }
 
     fun init() {
