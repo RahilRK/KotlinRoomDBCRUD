@@ -2,6 +2,7 @@ package com.example.kotlinroomdbcrud.dataBindingExample
 
 import android.util.Log
 import android.widget.ImageView
+import android.widget.TextView
 import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
@@ -13,7 +14,10 @@ import com.example.kotlinroomdbcrud.databinding.ProductlistItemBinding
 
 class BindingAdapter {
 
+
     companion object {
+
+        val TAG = "BindingAdapter"
 
         @BindingAdapter("setProductList")
         @JvmStatic // add this line !!
@@ -48,7 +52,7 @@ class BindingAdapter {
                 view.adapter = adapter
             }
             else {
-                Log.d("BindingAdpater", "setProductList: is NULL")
+                Log.d("BindingAdapter", "setProductList: is NULL")
             }
         }
 
@@ -59,5 +63,12 @@ class BindingAdapter {
             Glide.with(this.context).load(url).into(this)
         }
 
+        @BindingAdapter("customTextColor")
+        @JvmStatic // add this line !!
+        fun customTextColor(textView: TextView, model: ProductDataItem) {
+
+            Log.d(TAG, "customTextColor: ${model.title}")
+            textView.text = model.title
+        }
     }
 }
