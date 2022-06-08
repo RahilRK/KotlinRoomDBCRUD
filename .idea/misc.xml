@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="../../../../layout/custom_preview.xml" value="0.164568345323741" />
         <entry key="..\:/Rahil/AndroidProjects/KotlinRoomDBCRUD/app/src/main/res/layout/activity_app.xml" value="0.16770833333333332" />
         <entry key="..\:/Rahil/AndroidProjects/KotlinRoomDBCRUD/app/src/main/res/layout/activity_bottom_navigation.xml" value="0.16770833333333332" />
         <entry key="..\:/Rahil/AndroidProjects/KotlinRoomDBCRUD/app/src/main/res/layout/activity_bottom_sheet.xml" value="0.16770833333333332" />
@@ -32,9 +33,28 @@
         <entry key="..\:/Rahil/AndroidProjects/KotlinRoomDBCRUD/app/src/main/res/menu/home_nav_drawer_menu.xml" value="0.16770833333333332" />
         <entry key="..\:/Rahil/AndroidProjects/KotlinRoomDBCRUD/app/src/main/res/menu/nav_drawer_menu.xml" value="0.16770833333333332" />
         <entry key="..\:/Rahil/AndroidProjects/KotlinRoomDBCRUD/app/src/main/res/xml/network_security_config.xml" value="0.16770833333333332" />
+        <entry key="app/src/main/res/drawable/ic_baby_changing_station.xml" value="0.138" />
         <entry key="app/src/main/res/drawable/ic_profile.xml" value="0.2785" />
+        <entry key="app/src/main/res/drawable/splash_bg.xml" value="0.2745" />
+        <entry key="app/src/main/res/layout/activity_app.xml" value="0.26979166666666665" />
+        <entry key="app/src/main/res/layout/activity_bottom_sheet.xml" value="0.26979166666666665" />
+        <entry key="app/src/main/res/layout/activity_constraint_layout.xml" value="0.4" />
+        <entry key="app/src/main/res/layout/activity_custom_object.xml" value="0.26979166666666665" />
         <entry key="app/src/main/res/layout/activity_data_binding.xml" value="0.26979166666666665" />
+        <entry key="app/src/main/res/layout/activity_lottie_splash.xml" value="0.26979166666666665" />
+        <entry key="app/src/main/res/layout/activity_multiple_view_rvactivity.xml" value="0.26979166666666665" />
+        <entry key="app/src/main/res/layout/activity_navigation_drawer.xml" value="0.26979166666666665" />
         <entry key="app/src/main/res/layout/activity_product_list.xml" value="0.26979166666666665" />
+        <entry key="app/src/main/res/layout/activity_splash_screen_api.xml" value="0.26927083333333335" />
+        <entry key="app/src/main/res/layout/fragment_bottom_sheet.xml" value="0.26979166666666665" />
+        <entry key="app/src/main/res/layout/fragment_first.xml" value="0.26979166666666665" />
+        <entry key="app/src/main/res/layout/fragment_first_screen.xml" value="0.26979166666666665" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.26979166666666665" />
+        <entry key="app/src/main/res/layout/fragment_second_screen.xml" value="0.26979166666666665" />
+        <entry key="app/src/main/res/layout/fragment_third_screen.xml" value="0.26979166666666665" />
+        <entry key="app/src/main/res/layout/fragment_view_pager.xml" value="0.26979166666666665" />
+        <entry key="app/src/main/res/layout/item_view_1.xml" value="0.26979166666666665" />
+        <entry key="app/src/main/res/layout/item_view_2.xml" value="0.26875" />
         <entry key="app/src/main/res/layout/productlist_item.xml" value="0.264" />
       </map>
     </option>

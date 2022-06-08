@@ -15,7 +15,7 @@
         android:theme="@style/Theme.KotlinRoomDBCRUD"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".dataBindingExample.recyclerView.ProductListActivity"
+            android:name=".multiViewRecyclerView.MultipleViewRVActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,10 +24,48 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".flow.FlowActivity"
+            android:name=".ConstraintLayoutActivity"
             android:exported="true">
+<!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+-->
         </activity>
-        <activity android:name=".dataBindingExample.DataBindingActivity"></activity>
+        <activity
+            android:name=".splashScreenApi.SplashScreenApi"
+            android:exported="true"
+            android:theme="@style/Theme.AppSplash.Starting">
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        </activity>
+        <activity
+            android:name=".lottie.LottieSplashActivity"
+            android:exported="true">
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        </activity>
+        <activity
+            android:name=".dataBindingExample.recyclerView.ProductListActivity"
+            android:exported="true" />
+        <activity
+            android:name=".flow.FlowActivity"
+            android:exported="true" />
+        <activity android:name=".dataBindingExample.DataBindingActivity" />
         <activity android:name=".concepts.ConceptsActivity" />
         <activity
             android:name=".coroutine.SecondActivity"
@@ -59,14 +97,17 @@
             <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
             <!-- </intent-filter> -->
         </activity>
-        <activity android:name=".navigationComponent.bottomSheetFragment.BottomSheetActivity">
+        <activity
+            android:name=".navigationComponent.bottomSheetFragment.BottomSheetActivity"
+            android:exported="true">
 
-            <!-- <intent-filter> -->
-            <!-- <action android:name="android.intent.action.MAIN" /> -->
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-
-            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
-            <!-- </intent-filter> -->
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
         </activity>
         <activity android:name=".navigationComponent.CustomObjectSafeArgs.CustomObjectActivity">
 
@@ -79,12 +120,14 @@
         </activity>
         <activity android:name=".navigationComponent.viewPager.AppActivity">
 
-            <!-- <intent-filter> -->
-            <!-- <action android:name="android.intent.action.MAIN" /> -->
+            <!--
+             <intent-filter>
+             <action android:name="android.intent.action.MAIN" />
 
 
-            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
-            <!-- </intent-filter> -->
+             <category android:name="android.intent.category.LAUNCHER" />
+             </intent-filter>
+            -->
         </activity>
         <activity android:name=".navigationComponent.bottomNavigation">
 
@@ -97,12 +140,13 @@
         </activity>
         <activity android:name=".navigationComponent.navigationDrawer">
 
-            <!-- <intent-filter> -->
-            <!-- <action android:name="android.intent.action.MAIN" /> -->
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-
-            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
-            <!-- </intent-filter> -->
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
         </activity>
         <activity android:name=".MainActivity">
 

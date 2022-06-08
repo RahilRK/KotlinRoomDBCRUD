@@ -38,7 +38,7 @@ class BottomSheetFragment : BottomSheetDialogFragment() {
         homeMenu = view.findViewById(R.id.homeMenu);
 
         val bottomSheetBehavior =  (dialog as BottomSheetDialog).behavior
-        bottomSheetBehavior.peekHeight = 100
+//        bottomSheetBehavior.peekHeight = 100
 
         homeMenu.setOnClickListener {
             bottomSheetBehavior.setState(BottomSheetBehavior.STATE_EXPANDED)

@@ -29,7 +29,8 @@ class FragmentA : Fragment() {
             var model = profileModel(getFirstName,getLastName,getAge)
 
             var action = FragmentADirections.actionFragmentAToFragmentB(model)
-            findNavController().navigate(action)
+            findNavController().navigate(action)//                ZoomImageFragment.newInstance("A",
+//                    "B").show(parentFragmentManager, TAG)
         }
 
         return binding.root

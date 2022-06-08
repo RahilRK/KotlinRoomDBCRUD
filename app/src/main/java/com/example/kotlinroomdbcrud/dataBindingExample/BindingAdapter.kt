@@ -57,18 +57,25 @@ class BindingAdapter {
         }
 
         @BindingAdapter("setImageUrl")
-        @JvmStatic // add this line !!
+        @JvmStatic
         fun ImageView.setImageUrl(url: String) {
 
             Glide.with(this.context).load(url).into(this)
         }
 
         @BindingAdapter("customTextColor")
-        @JvmStatic // add this line !!
+        @JvmStatic
         fun customTextColor(textView: TextView, model: ProductDataItem) {
 
             Log.d(TAG, "customTextColor: ${model.title}")
             textView.text = model.title
+
+            if(model.price > 50) {
+                textView.setTextColor(textView.resources.getColor(R.color.purple_500))
+            }
+            else {
+                textView.setTextColor(textView.resources.getColor(R.color.black))
+            }
         }
     }
 }
