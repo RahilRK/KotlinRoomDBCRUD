@@ -1,4 +1,4 @@
-package com.example.kotlinroomdbcrud.dataBindingExample
+package com.example.hilt_example.binding
 
 import android.util.Log
 import android.widget.ImageView
@@ -9,7 +9,6 @@ import com.bumptech.glide.Glide
 import com.example.kotlinroomdbcrud.R
 import com.example.kotlinroomdbcrud.dataBindingExample.model.ProductData
 import com.example.kotlinroomdbcrud.dataBindingExample.model.ProductDataItem
-import com.example.kotlinroomdbcrud.dataBindingExample.recyclerView.GenericRecyclerViewAdapter
 import com.example.kotlinroomdbcrud.databinding.ProductlistItemBinding
 
 class BindingAdapter {
@@ -27,7 +26,7 @@ class BindingAdapter {
             ) {
 
             if(!arrayList.isNullOrEmpty()) {
-                val adapter = object : GenericRecyclerViewAdapter<ProductDataItem,ProductlistItemBinding>(
+                val adapter = object : GenericRecyclerViewAdapter<ProductDataItem, ProductlistItemBinding>(
                     view.context,
                     arrayList
                 ) {

@@ -1,9 +1,7 @@
-package com.example.kotlinroomdbcrud.dataBindingExample.network
+package com.example.kotlinroomdbcrud.util
 
-import com.example.kotlinroomdbcrud.dagger2Retrofit.model.ProductsItem
+import com.example.kotlinroomdbcrud.dataBindingExample.network.ResponseHandler
 import com.kotlinusermodule.network.model.HttpErrorCode
-import okhttp3.Response
-import okhttp3.ResponseBody
 
 open class BaseRepository {
 
@@ -15,16 +13,18 @@ open class BaseRepository {
                     ResponseHandler.OnSuccessResponse(response.body())
                 else ->
                     ResponseHandler.OnFailed(
-                    HttpErrorCode.UNAUTHORIZED.code,
-                    response.message(),
-                    "Error message code"
-                )
+                        HttpErrorCode.UNAUTHORIZED.code,
+                        response.message(),
+                        "Error message code"
+                    )
             }
 
         } catch (e: Throwable) {
-            ResponseHandler.OnFailed(HttpErrorCode.NO_CONNECTION.code,
+            ResponseHandler.OnFailed(
+                HttpErrorCode.NO_CONNECTION.code,
                 "Error message",
-                "Error message code")
+                "Error message code"
+            )
         }
     }
 }

@@ -1,4 +1,4 @@
-package com.example.kotlinroomdbcrud.dataBindingExample.network
+package com.example.kotlinroomdbcrud.util
 
 import androidx.lifecycle.ViewModel
 
