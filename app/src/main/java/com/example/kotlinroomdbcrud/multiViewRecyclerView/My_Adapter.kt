@@ -8,7 +8,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.kotlinroomdbcrud.R
 
-class mAdapter(context: Context, var list: ArrayList<DataModel>) :
+class My_Adapter(context: Context, var list: ArrayList<DataModel>) :
     RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     companion object {
