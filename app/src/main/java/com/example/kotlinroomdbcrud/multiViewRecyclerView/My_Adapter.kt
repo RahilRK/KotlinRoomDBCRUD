@@ -18,6 +18,25 @@ class My_Adapter(context: Context, var list: ArrayList<DataModel>) :
 
     private val yourContext: Context = context
 
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
+        if (viewType == VIEW_TYPE_ONE) {
+            return View1ViewHolder(
+                LayoutInflater.from(yourContext).inflate(R.layout.item_view_1, parent, false)
+            )
+        }
+        return View2ViewHolder(
+            LayoutInflater.from(yourContext).inflate(R.layout.item_view_2, parent, false)
+        )
+    }
+
+    override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
+        if (list[position].theView == VIEW_TYPE_ONE) {
+            (holder as View1ViewHolder).bind(position)
+        } else {
+            (holder as View2ViewHolder).bind(position)
+        }
+    }
+
     private inner class View1ViewHolder(itemView: View) :
         RecyclerView.ViewHolder(itemView) {
         var gfgText: TextView = itemView.findViewById(R.id.gfgTextView1)
@@ -36,27 +55,8 @@ class My_Adapter(context: Context, var list: ArrayList<DataModel>) :
         }
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
-        if (viewType == VIEW_TYPE_ONE) {
-            return View1ViewHolder(
-                LayoutInflater.from(yourContext).inflate(R.layout.item_view_1, parent, false)
-            )
-        }
-        return View2ViewHolder(
-            LayoutInflater.from(yourContext).inflate(R.layout.item_view_2, parent, false)
-        )
-    }
-
     override fun getItemCount(): Int {
         return list.size
-    }
-
-    override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
-        if (list[position].theView == VIEW_TYPE_ONE) {
-            (holder as View1ViewHolder).bind(position)
-        } else {
-            (holder as View2ViewHolder).bind(position)
-        }
     }
 
     override fun getItemViewType(position: Int): Int {

@@ -15,6 +15,15 @@
         android:theme="@style/Theme.KotlinRoomDBCRUD"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".ConstraintProfile"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".multiViewRecyclerView.MultipleViewRVActivity"
             android:exported="true">
             <intent-filter>
@@ -26,13 +35,14 @@
         <activity
             android:name=".ConstraintLayoutActivity"
             android:exported="true">
-<!--
+
+            <!--
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
--->
+            -->
         </activity>
         <activity
             android:name=".splashScreenApi.SplashScreenApi"
