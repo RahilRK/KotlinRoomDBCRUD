@@ -8,4 +8,9 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="splash_bg_color">#0E0E2C</color>
+    <color name="hint_color">#A2A2A2</color>
+    <color name="error">#B00020</color>
+    <color name="focus_indicator_color">#52C3FF</color>
+    <color name="indicator_color">#EAEAEA</color>
+
 </resources>

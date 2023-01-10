@@ -1,4 +1,4 @@
-package com.example.kotlinroomdbcrud.dagger2Retrofit.model
+package com.example.kotlinroomdbcrud.flow.model
 
 data class ProductsItem(
     val category: String?="",

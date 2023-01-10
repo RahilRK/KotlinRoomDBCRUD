@@ -3,7 +3,6 @@ package com.example.kotlinroomdbcrud.dataBindingExample
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.kotlinroomdbcrud.dagger2Retrofit.model.ProductsItem
 
 class DataBindingViewModel:ViewModel() {
 

@@ -2,3 +2,4 @@ rootProject.name = "KotlinRoomDBCRUD"
 include ':app'
 include ':picker'
 include ':easyratingview'
+include ':CountryPicker'
