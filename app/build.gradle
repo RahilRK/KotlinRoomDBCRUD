@@ -14,7 +14,7 @@ android {
     defaultConfig {
         applicationId "com.example.kotlinroomdbcrud"
 //        minSdkVersion 21
-        minSdkVersion 23
+        minSdkVersion 24
         targetSdkVersion 32
         versionCode 1
         versionName "1.0"
@@ -94,5 +94,25 @@ dependencies {
 
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.ext:junit-ktx:1.1.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-intents:3.4.0'
+    androidTestImplementation('com.android.support.test.espresso:espresso-contrib:3.0.2'){
+        exclude group: 'com.android.support', module: 'appcompat'
+        exclude module: 'recyclerview-v7'
+        exclude module: 'appcompat-v7'
+    }
+    androidTestImplementation('androidx.test:runner:1.4.0')
+    androidTestImplementation('androidx.test:rules:1.4.0')
+    debugImplementation("androidx.fragment:fragment-testing:1.5.5")
+    testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.4"
+    testImplementation 'org.mockito:mockito-core:4.5.1'
+    testImplementation 'com.nhaarman.mockitokotlin2:mockito-kotlin:2.2.0'
+    testImplementation("com.squareup.okhttp3:mockwebserver:4.10.0")
+
+//    implementation 'com.arthenica:mobile-ffmpeg-full:4.3'libfreetype
+//    implementation 'com.arthenica:mobile-ffmpeg-min-gpl:4.4'
+//    implementation 'com.arthenica:mobile-ffmpeg-full:4.2.2'
+    implementation 'com.arthenica:mobile-ffmpeg-full-gpl:4.4'
+    implementation("androidx.work:work-runtime-ktx:2.7.1")
 }

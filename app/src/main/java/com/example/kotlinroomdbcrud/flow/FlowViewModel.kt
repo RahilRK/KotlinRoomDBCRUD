@@ -20,7 +20,7 @@ class FlowViewModel(private val repository: Repository) :ViewModel() {
         get() = _list
 
     init {
-        getProducts()
+//        getProducts()
     }
 
     private fun getProducts() {
