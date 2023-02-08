@@ -174,7 +174,7 @@ class DoBlurWorker(context: Context, params: WorkerParameters) : CoroutineWorker
                     setForeground(
                         createAndUpdateNotification(
                             "Hold on, working on it",
-                            "Working on it",
+                            "Working on it.",
                             "${calculatePercentage}%",
                             calculatePercentage
                         )
