@@ -15,7 +15,7 @@ android {
         applicationId "com.example.kotlinroomdbcrud"
 //        minSdkVersion 21
         minSdkVersion 24
-        targetSdkVersion 32
+        targetSdkVersion 31
         versionCode 1
         versionName "1.0"
 
@@ -115,4 +115,26 @@ dependencies {
 //    implementation 'com.arthenica:mobile-ffmpeg-full:4.2.2'
     implementation 'com.arthenica:mobile-ffmpeg-full-gpl:4.4'
     implementation("androidx.work:work-runtime-ktx:2.7.1")
+    // dependency for exoplayer
+    implementation 'com.google.android.exoplayer:exoplayer:r2.4.0'
+
+// for core support in exoplayer.
+    implementation 'com.google.android.exoplayer:exoplayer-core:r2.4.0'
+
+// for adding dash support in our exoplayer.
+    implementation 'com.google.android.exoplayer:exoplayer-dash:r2.4.0'
+
+// for adding hls support in exoplayer.
+    implementation 'com.google.android.exoplayer:exoplayer-hls:r2.4.0'
+
+// for smooth streaming of video in our exoplayer.
+    implementation 'com.google.android.exoplayer:exoplayer-smoothstreaming:r2.4.0'
+
+// for generating default ui of exoplayer
+    implementation 'com.google.android.exoplayer:exoplayer-ui:r2.4.0'
+
+    /*biometric*/
+    def biometricLibraryVersion = "1.0.1"
+//    implementation "androidx.biometric:biometric:$biometricLibraryVersion"
+    implementation("androidx.biometric:biometric:1.2.0-alpha04")
 }

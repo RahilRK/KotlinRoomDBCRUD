@@ -20,10 +20,10 @@ class HomeFragment : Fragment() {
     var TAG = "HomeFragment"
 
     lateinit var binding: FragmentHomeBinding
-    lateinit var homeFragViewModel: HomeFragViewModel
+//    lateinit var homeFragViewModel: HomeFragViewModel
 
-    val job = Job()
-    val ioScope = CoroutineScope(Dispatchers.IO + job)
+//    val job = Job()
+//    val ioScope = CoroutineScope(Dispatchers.IO + job)
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -32,7 +32,7 @@ class HomeFragment : Fragment() {
         // Inflate the layout for this fragment
         binding = FragmentHomeBinding.inflate(layoutInflater, container, false)
 
-        val repository = retrofitRepository()
+/*        val repository = retrofitRepository()
         val viewModelFact = HomeFragViewModelFact(repository)
         homeFragViewModel =
             ViewModelProvider(requireActivity(), viewModelFact).get(HomeFragViewModel::class.java)
@@ -79,7 +79,7 @@ class HomeFragment : Fragment() {
 
                 })
             }
-        }
+        }*/
 
         return binding.root
     }

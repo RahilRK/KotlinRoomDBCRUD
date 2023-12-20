@@ -4,13 +4,13 @@
     package="com.example.kotlinroomdbcrud">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
 
     <application
         android:name=".util.Application"
-        tools:replace="android:theme"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -18,15 +18,31 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.KotlinRoomDBCRUD"
-        android:usesCleartextTraffic="true" >
+        android:usesCleartextTraffic="true"
+        tools:replace="android:theme">
         <activity
-            android:name=".ffmpeg.FfmpegActivity"
-            android:exported="true" >
-            <intent-filter>
+            android:name=".ffmpeg.FFmpegVideoFilterActivity"
+            android:exported="true">
+            <!--<intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            </intent-filter>-->
+
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".ffmpeg.FfmpegActivity"
+            android:exported="true">
+            <!--
+                        <intent-filter>
+                            <action android:name="android.intent.action.MAIN" />
+
+                            <category android:name="android.intent.category.LAUNCHER" />
+                        </intent-filter>
+            -->
 
             <meta-data
                 android:name="android.app.lib_name"
@@ -34,7 +50,7 @@
         </activity>
         <activity
             android:name=".intro_view_pager.IntroActivity"
-            android:exported="true" >
+            android:exported="true">
 
             <!--
              <intent-filter>
@@ -46,7 +62,7 @@
         </activity>
         <activity
             android:name=".CountryCodePickerActivity"
-            android:exported="true" >
+            android:exported="true">
 
             <!--
             <intent-filter>
@@ -58,7 +74,7 @@
         </activity>
         <activity
             android:name=".ConstraintProfile"
-            android:exported="true" >
+            android:exported="true">
 
             <!--
             <intent-filter>
@@ -70,7 +86,7 @@
         </activity>
         <activity
             android:name=".multiViewRecyclerView.MultipleViewRVActivity"
-            android:exported="true" >
+            android:exported="true">
 
             <!--
             <intent-filter>
@@ -82,7 +98,7 @@
         </activity>
         <activity
             android:name=".ConstraintLayoutActivity"
-            android:exported="true" >
+            android:exported="true">
 
             <!--
             <intent-filter>
@@ -95,7 +111,7 @@
         <activity
             android:name=".splashScreenApi.SplashScreenApi"
             android:exported="true"
-            android:theme="@style/Theme.AppSplash.Starting" >
+            android:theme="@style/Theme.AppSplash.Starting">
 
             <!--
             <intent-filter>
@@ -107,7 +123,7 @@
         </activity>
         <activity
             android:name=".lottie.LottieSplashActivity"
-            android:exported="true" >
+            android:exported="true">
 
             <!--
             <intent-filter>
@@ -122,21 +138,22 @@
             android:exported="true" />
         <activity
             android:name=".flow.FlowActivity"
-            android:exported="true" >
-<!--
+            android:exported="true">
+
+            <!--
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
--->
+            -->
         </activity>
         <activity android:name=".dataBindingExample.DataBindingActivity" />
         <activity android:name=".concepts.ConceptsActivity" />
         <activity
             android:name=".coroutine.SecondActivity"
             android:exported="false" />
-        <activity android:name=".coroutine.CoroutineActivity" >
+        <activity android:name=".coroutine.CoroutineActivity">
 
             <!-- <intent-filter> -->
             <!-- <action android:name="android.intent.action.MAIN" /> -->
@@ -147,17 +164,17 @@
         </activity>
         <activity
             android:name=".navigationComponent.bottomSheetFragment.BottomSheetActivity"
-            android:exported="true" >
+            android:exported="true">
 
-            <!--
+<!--
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-            -->
+-->
         </activity>
-        <activity android:name=".navigationComponent.CustomObjectSafeArgs.CustomObjectActivity" >
+        <activity android:name=".navigationComponent.CustomObjectSafeArgs.CustomObjectActivity">
 
             <!-- <intent-filter> -->
             <!-- <action android:name="android.intent.action.MAIN" /> -->
@@ -166,7 +183,7 @@
             <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
             <!-- </intent-filter> -->
         </activity>
-        <activity android:name=".navigationComponent.viewPager.AppActivity" >
+        <activity android:name=".navigationComponent.viewPager.AppActivity">
 
             <!--
              <intent-filter>
@@ -179,17 +196,15 @@
         </activity>
         <activity
             android:name=".navigationComponent.bottomNavigation"
-            android:exported="true" >
+            android:exported="true">
 
-            <!--
-                        <intent-filter>
-                            <action android:name="android.intent.action.MAIN" />
+            <!--<intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-                            <category android:name="android.intent.category.LAUNCHER" />
-                        </intent-filter>
-            -->
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>-->
         </activity>
-        <activity android:name=".navigationComponent.navigationDrawer" >
+        <activity android:name=".navigationComponent.navigationDrawer">
 
             <!--
             <intent-filter>
@@ -199,7 +214,7 @@
             </intent-filter>
             -->
         </activity>
-        <activity android:name=".MainActivity" >
+        <activity android:name=".MainActivity">
 
             <!-- <intent-filter> -->
             <!-- <action android:name="android.intent.action.MAIN" /> -->
@@ -207,6 +222,16 @@
 
             <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
             <!-- </intent-filter> -->
+        </activity>
+        <activity android:name=".biometric.finger_print.login.LoginActivity"
+            android:exported="true">
+
+             <intent-filter>
+             <action android:name="android.intent.action.MAIN" />
+
+
+             <category android:name="android.intent.category.LAUNCHER" />
+             </intent-filter>
         </activity>
     </application>
 

@@ -131,6 +131,7 @@ class FfmpegActivity : AppCompatActivity() {
             inputPath,  //                "-y",
             "-filter_complex",
             "boxblur=30",
+            "-preset", "ultrafast",
             outPath
         )
         val rc = FFmpeg.execute(blurCommand)
@@ -231,7 +232,9 @@ class FfmpegActivity : AppCompatActivity() {
                 "-codec:a",
                 "copy",
                 outPath
-        };*/saveFont()
+        };*/
+
+        saveFont()
         val waterMarkCommand = arrayOf(
             "-i",
             blurVideoPath,  //                "-y",
@@ -251,6 +254,7 @@ class FfmpegActivity : AppCompatActivity() {
                     "[bkg][img2]overlay=(W-w)/2:(H-h)/2+200," +
                     "drawtext=text='Weed Tube':fontfile=" + fontFilePath!!.path + ":fontsize=30:fontcolor=black:" +
                     "x=(w-text_w)/2:y=(h-text_h)/2-200",
+            "-preset", "ultrafast",
             outPath
         )
         val rc = FFmpeg.execute(waterMarkCommand)

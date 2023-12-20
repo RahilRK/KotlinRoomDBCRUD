@@ -198,6 +198,7 @@ class DoBlurWorker(context: Context, params: WorkerParameters) : CoroutineWorker
 //            "-y",
             "-filter_complex",
             "boxblur=30",
+            "-preset", "ultrafast",
             outPath
         )
         val rc = FFmpeg.execute(blurCommand)
@@ -299,12 +300,14 @@ class DoBlurWorker(context: Context, params: WorkerParameters) : CoroutineWorker
             pipeline_imagePath,
             "-y",
             "-filter_complex",
-            "[1]scale=300:300[img1];" +
+            "[1]scale2ref=300:300[img1];" +
+//            "[1]scale2ref=w='iw*5/100':h='ow/mdar'[img1];" +
                     "[2]scale=iw/1:-1[img2];" +
                     "[0][img1]overlay=(W-w)/2:(H-h)/2[bkg];" +
                     "[bkg][img2]overlay=(W-w)/2:(H-h)/2+250," +
                     "drawtext=text='Weed Tube':fontfile=" + fontFilePath!!.path + ":fontsize=30:fontcolor=black:" +
                     "x=(w-text_w)/2:y=(h-text_h)/2-200",
+            "-preset", "ultrafast",
             outPath
         )
         val rc = FFmpeg.execute(waterMarkCommand)

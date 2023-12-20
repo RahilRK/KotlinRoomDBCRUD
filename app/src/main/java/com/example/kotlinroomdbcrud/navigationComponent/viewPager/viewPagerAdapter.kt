@@ -19,4 +19,6 @@ class viewPagerAdapter(
 
         return fragmentList[position]
     }
+
+    
 }
