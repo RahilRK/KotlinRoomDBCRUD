@@ -17,13 +17,21 @@
 package com.example.kotlinroomdbcrud.biometric.finger_print.login
 
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.Toast
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.biometric.BiometricPrompt
+import androidx.core.widget.doAfterTextChanged
+import androidx.lifecycle.Observer
 import com.example.kotlinroomdbcrud.biometric.finger_print.util.BiometricAuthListener
 import com.example.kotlinroomdbcrud.biometric.finger_print.util.BiometricUtil
+import com.example.kotlinroomdbcrud.biometric.finger_print.util.FailedLoginFormState
+import com.example.kotlinroomdbcrud.biometric.finger_print.util.SampleAppUser
+import com.example.kotlinroomdbcrud.biometric.finger_print.util.SuccessfulLoginFormState
 import com.example.kotlinroomdbcrud.databinding.ActivityLoginBinding
+import kotlinx.android.synthetic.main.activity_login.success
 
 /**
  * After entering "valid" username and password, login button becomes enabled
@@ -32,15 +40,63 @@ class LoginActivity : AppCompatActivity(), BiometricAuthListener {
     private val TAG = "LoginActivity"
 
     private lateinit var binding: ActivityLoginBinding
+    private val loginWithPasswordViewModel by viewModels<LoginViewModel>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
-//        setupForLoginWithPassword()
 
-        showBiometricLoginOption()
+//        showBiometricLoginOption()
 
+        observeData()
+        setupForLoginWithPassword()
+    }
+
+    private fun observeData() {
+        loginWithPasswordViewModel.loginWithPasswordFormState.observe(this, Observer { loginState ->
+            when (loginState) {
+                is SuccessfulLoginFormState -> {
+                    binding.login.isEnabled = loginState.isDataValid
+                }
+
+                is FailedLoginFormState -> {
+                    loginState.usernameError?.let {
+                        binding.username.error = getString(it)
+                    }
+                    loginState.passwordError?.let {
+                        binding.password.error = getString(it)
+                    }
+                }
+            }
+        })
+
+        loginWithPasswordViewModel.loginResult.observe(this) { result ->
+            if (result.success) {
+                updateApp(
+                    "You successfully signed up using password as: user: " +
+                            "${SampleAppUser.username} with fake token: ${SampleAppUser.fakeToken}"
+                )
+            }
+        }
+        Log.d(TAG, "Username ${SampleAppUser.username}; fake token ${SampleAppUser.fakeToken}")
+    }
+
+    private fun setupForLoginWithPassword() {
+        binding.username.doAfterTextChanged {
+            loginWithPasswordViewModel.onLoginDataChanged(
+                binding.username.text.toString(),
+                binding.password.text.toString()
+            )
+        }
+        binding.password.doAfterTextChanged {
+            loginWithPasswordViewModel.onLoginDataChanged(
+                binding.username.text.toString(),
+                binding.password.text.toString()
+            )
+        }
+
+/*
         binding.buttonBiometricsLogin.setOnClickListener {
             BiometricUtil.showBiometricPrompt(
                 activity = this,
@@ -49,14 +105,32 @@ class LoginActivity : AppCompatActivity(), BiometricAuthListener {
                 allowDeviceCredential = true
             )
         }
+*/
+
+        binding.login.setOnClickListener {
+
+            loginWithPasswordViewModel.login(
+                binding.username.text.toString(),
+                binding.password.text.toString()
+            )
+        }
+        Log.d(TAG, "Username ${SampleAppUser.username}; fake token ${SampleAppUser.fakeToken}")
     }
 
-    private fun showBiometricLoginOption() {
-        binding.buttonBiometricsLogin.visibility =
-            if (BiometricUtil.isBiometricReady(this))
-                View.VISIBLE
-            else
-                View.GONE
+    /*
+        private fun showBiometricLoginOption() {
+            binding.buttonBiometricsLogin.visibility =
+                if (BiometricUtil.isBiometricReady(this))
+                    View.VISIBLE
+                else
+                    View.GONE
+        }
+    */
+
+    private fun updateApp(successMsg: String) {
+        binding.success.text = successMsg
+        Toast.makeText(this, successMsg, Toast.LENGTH_SHORT).show()
+        Log.d(TAG, "updateApp: $successMsg")
     }
 
     override fun onBiometricAuthenticationSuccess(result: BiometricPrompt.AuthenticationResult) {

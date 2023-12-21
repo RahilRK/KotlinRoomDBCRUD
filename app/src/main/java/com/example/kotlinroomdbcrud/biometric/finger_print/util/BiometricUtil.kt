@@ -17,7 +17,7 @@ object BiometricUtil {
     fun isBiometricReady(context: Context) =
         hasBiometricCapability(context) == BiometricManager.BIOMETRIC_SUCCESS
 
-    fun setBiometricPromptInfo(
+    private fun setBiometricPromptInfo(
         title: String,
         subtitle: String,
         description: String,
@@ -88,8 +88,10 @@ object BiometricUtil {
 
         // 3
         biometricPrompt.apply {
-            if (cryptoObject == null) authenticate(promptInfo)
-            else authenticate(promptInfo, cryptoObject)
+            if (cryptoObject == null)
+                authenticate(promptInfo)
+            else
+                authenticate(promptInfo, cryptoObject)
         }
     }
 }
