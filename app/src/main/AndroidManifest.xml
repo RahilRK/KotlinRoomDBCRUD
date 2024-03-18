@@ -174,25 +174,27 @@
             </intent-filter>
 -->
         </activity>
-        <activity android:name=".navigationComponent.CustomObjectSafeArgs.CustomObjectActivity">
+        <activity android:name=".navigationComponent.CustomObjectSafeArgs.CustomObjectActivity"
+            android:exported="true">
 
-            <!-- <intent-filter> -->
-            <!-- <action android:name="android.intent.action.MAIN" /> -->
-
-
-            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
-            <!-- </intent-filter> -->
-        </activity>
-        <activity android:name=".navigationComponent.viewPager.AppActivity">
-
-            <!--
              <intent-filter>
              <action android:name="android.intent.action.MAIN" />
 
 
              <category android:name="android.intent.category.LAUNCHER" />
              </intent-filter>
-            -->
+        </activity>
+        <activity android:name=".navigationComponent.viewPager.AppActivity"
+            android:exported="true">
+
+<!--
+             <intent-filter>
+             <action android:name="android.intent.action.MAIN" />
+
+
+             <category android:name="android.intent.category.LAUNCHER" />
+             </intent-filter>
+-->
         </activity>
         <activity
             android:name=".navigationComponent.bottomNavigation"
@@ -226,12 +228,14 @@
         <activity android:name=".biometric.finger_print.login.LoginActivity"
             android:exported="true">
 
+<!--
              <intent-filter>
              <action android:name="android.intent.action.MAIN" />
 
 
              <category android:name="android.intent.category.LAUNCHER" />
              </intent-filter>
+-->
         </activity>
     </application>
 
